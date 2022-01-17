@@ -58,7 +58,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
   }
 
   viewer_certificate {
-    cloudfront_default_certificate = "${!local.custom_certificate}"
+    #cloudfront_default_certificate = "${!local.custom_certificate}"
 
     acm_certificate_arn      = "${local.custom_certificate ? element(concat(data.aws_acm_certificate.c.*.arn, list("")), 0) : ""}"
     #minimum_protocol_version = "${local.custom_certificate ? "TLSv1.2_2019" : "TLSv1.2"}"
