@@ -57,8 +57,6 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
     compress               = "${var.cf_compress}"
   }
 
-  web_acl_id = var.waf_id
-
   viewer_certificate {
     cloudfront_default_certificate = "${!local.custom_certificate}"
 
