@@ -66,3 +66,5 @@ variable "cf_max_ttl" {
 variable "cf_compress" {
   default = true
 }
+
+variable "waf_id" {}
