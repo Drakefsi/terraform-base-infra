@@ -2,12 +2,18 @@ resource "aws_s3_bucket" "bucket" {
   bucket        = var.bucket_name
   force_destroy = true
 
-  website {
-    index_document = var.index_document
-    error_document = var.error_document
+}
+
+resource "aws_s3_bucket_website_configuration" "example" {
+  bucket = aws_s3_bucket.bucket.bucket
+
+  index_document {
+    suffix = var.index_document
   }
 
-
+  error_document {
+    key = var.error_document
+  }
 }
 
 resource "aws_s3_bucket_cors_configuration" "bucket" {
