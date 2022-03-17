@@ -5,7 +5,7 @@ variable "policy" {
   default = null
 }
 
-variable "enable" {
+variable "policy_enable" {
   default = "enable"
 }
 
