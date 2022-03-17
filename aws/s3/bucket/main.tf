@@ -3,6 +3,7 @@ resource "aws_s3_bucket" "bucket" {
 }
 
 resource "aws_s3_bucket_policy" "bucket" {
+  count  = var.enable_policy
   bucket = aws_s3_bucket.bucket.id
   policy = var.policy
 }

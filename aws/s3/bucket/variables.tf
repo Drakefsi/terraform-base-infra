@@ -5,6 +5,10 @@ variable "policy" {
   default = null
 }
 
+variable "enable_policy" {
+  default = 1
+}
+
 variable "acl" {
   default = "public-read"
 }
