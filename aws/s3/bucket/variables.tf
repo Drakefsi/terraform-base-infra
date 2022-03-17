@@ -1,7 +1,8 @@
 variable "bucket_name" {}
 
 variable "policy" {
-  default = ""
+  type    = string
+  default = null
 }
 
 variable "acl" {
