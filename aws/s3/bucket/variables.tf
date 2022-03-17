@@ -6,7 +6,7 @@ variable "policy" {
 }
 
 variable "policy_enable" {
-  default = "enable"
+  default = "true"
 }
 
 variable "acl" {
